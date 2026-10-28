@@ -1,0 +1,4 @@
+interface:
+  display_name: "Neo_PPT_skill"
+  short_description: "制作蓝白橙案例年鉴式演讲PPT，包含真实配图、逐页讲稿与演示检查"
+  default_prompt: "使用 $neo-ppt-skill，依据我的材料制作16:9案例年鉴式HTML演讲PPT，先整理大纲和讲稿，按已确认风格完成并逐页检查。"

@@ -1,0 +1,21 @@
+# Local operating-system and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local credentials and private configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+storage-state*.json
+
+# Generated packages and temporary working files
+*.zip
+__pycache__/
+*.pyc
+node_modules/
+.tmp/
