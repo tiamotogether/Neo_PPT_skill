@@ -5,7 +5,7 @@ description: 按 Neo_PPT_skill 规范创建或修改16:9案例年鉴式演讲PPT
 
 # Neo_PPT_skill
 
-制作能现场演讲、能离线打开、内容有依据的案例年鉴式PPT。显示名称保持 **Neo_PPT_skill**；标准调用名为 `$neo-ppt-skill`。
+制作能现场演讲、能离线打开、内容有依据的案例年鉴式PPT。名称保持 **Neo_PPT_skill**，面向 Codex、DeepSeek 等能够读取技能说明的 AI Agent。在 Codex 中可用 `$neo-ppt-skill` 调用；其他 Agent 按所在环境支持的方式加载本文件及相关参考文件。具体制作和检查使用当前环境可用的工具。
 
 ## 使用边界
 
