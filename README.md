@@ -2,6 +2,17 @@
 
 面向真实演讲的 **16:9 案例年鉴式 PPT 制作技能**：先理清材料和讲述主线，再形成逐页讲稿与页面，最后实际打开检查。
 
+## 效果预览
+
+下面4张图取自既有140页演讲成品的实际页面，展示封面、a16z人物、工具图标和工作流。**点击图片可查看1920×1080原图。**
+
+| 版式示例 | 版式示例 |
+|---|---|
+| [![立体像素封面：从 Copilot 到 Agent 公司](docs/previews/01-cover.png)](docs/previews/01-cover.png)<br>**立体像素封面** · 原第001页 | [![人物首页：Olivia Moore](docs/previews/02-person-profile.png)](docs/previews/02-person-profile.png)<br>**人物首页** · 原第006页 |
+| [![工具图标卡片：n8n、Figma、HeyGen](docs/previews/03-tool-icons.png)](docs/previews/03-tool-icons.png)<br>**工具图标卡片** · 原第012页 | [![图文工作流：n8n](docs/previews/04-workflow.png)](docs/previews/04-workflow.png)<br>**图文工作流** · 原第013页 |
+
+页面保留原有日期和页码，用于展示已完成的排版效果，不作为最新行业报告或人物背书。[查看页面对应关系与素材来源](docs/previews/README.md)。
+
 这是供 Codex 使用的技能规范，包含工作方法、视觉规则和交付检查表。它不是独立的 PPT 自动生成软件，也不附带一键生成程序；具体制作和验证由使用该技能的 Codex 结合当前材料与可用工具完成。
 
 ## 适合做什么
@@ -94,6 +105,13 @@ Neo_PPT_skill/
 ├── SKILL.md
 ├── agents/
 │   └── openai.yaml
+├── docs/
+│   └── previews/
+│       ├── README.md
+│       ├── 01-cover.png
+│       ├── 02-person-profile.png
+│       ├── 03-tool-icons.png
+│       └── 04-workflow.png
 └── references/
     ├── visual-spec.md
     ├── delivery-checklist.md
@@ -105,10 +123,11 @@ Neo_PPT_skill/
 - [交付检查表](references/delivery-checklist.md)：内容、画面、交互、离线与导出核对。
 - [项目示例](references/project-example.md)：一次长篇演讲如何形成这些约定。
 - [显示与调用设置](agents/openai.yaml)：技能名称、简短说明和默认提示。
+- [效果图与来源](docs/previews/README.md)：4张实际页面截图、对应页码和素材出处。
 
 ## 素材与检查
 
-本仓库只包含技能规范和说明文档，不包含原始演讲 PPT、学员资料、人物照片、项目图片、第三方图表或字体文件。制作新演讲时，需要另行提供或取得合适的素材；外部图片、字体和资料按各自许可使用，不因本仓库开源而获得额外授权。
+本仓库包含技能规范、说明文档和4张成品页面效果图，不提供完整原始演讲 PPT、学员资料或字体文件。截图中的第三方人物照片、图标和其他素材保留各自权利，不受本项目 MIT 许可证覆盖；来源见[效果图说明](docs/previews/README.md)。制作新演讲时，需要另行提供或取得合适的素材，不能把本仓库开源视为取得第三方素材的额外使用授权。
 
 技能要求检查真实交付物：包括逐页画面、前后翻页、章节和页码跳转、讲稿、演讲者窗口同步、图片放大及离线打开。若本次交付包含 PDF 或压缩包，还要确认它们与最终演示稿一致。检查方法写入规范，不代表未经制作的每一份新课件都已经通过验证。
 
