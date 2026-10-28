@@ -13,7 +13,7 @@
 
 页面保留原有日期和页码，用于展示已完成的排版效果，不作为最新行业报告或人物背书。[查看页面对应关系与素材来源](docs/previews/README.md)。
 
-这是供 Codex 使用的技能规范，包含工作方法、视觉规则和交付检查表。它不是独立的 PPT 自动生成软件，也不附带一键生成程序；具体制作和验证由使用该技能的 Codex 结合当前材料与可用工具完成。
+这是面向 **Codex、DeepSeek 等 AI Agent** 的 PPT 制作 Skill，包含工作方法、视觉规则和交付检查表。支持读取技能说明的 AI Agent 都可以按本规范工作；具体制作和验证由所用 Agent 结合当前材料与可用工具完成。它不是独立的 PPT 自动生成软件，也不附带一键生成程序。
 
 ## 适合做什么
 
@@ -42,11 +42,11 @@
 
 用户当前要求、已有成品和已确认样图始终优先。项目示例中的学校、主题、140页、案例编号和具体删改记录都不是新项目的固定要求。
 
-## 安装到 Codex
+## 安装与使用
 
-仓库根目录的 [SKILL.md](SKILL.md) 是技能入口。显示名称为 **Neo_PPT_skill**，调用名为 **`$neo-ppt-skill`**。
+仓库根目录的 [SKILL.md](SKILL.md) 是技能入口，名称为 **Neo_PPT_skill**。在 Codex 中可使用 **`$neo-ppt-skill`** 调用；其他 Agent 按其支持的方式加载技能说明及相关参考文件。
 
-### 使用 Git（macOS / Linux）
+### Codex：使用 Git 安装（macOS / Linux）
 
 需要已经安装 Git 和可加载本地技能的 Codex。以下命令将仓库放入个人技能目录；如果同名目录已存在，会停止安装，不覆盖现有技能。
 
@@ -64,11 +64,17 @@ fi
 
 已有同名技能时，先检查和备份本地修改，再决定如何更新；不要直接删除旧目录。
 
-### 下载文件安装
+### Codex：下载文件安装
 
 在 GitHub 点击 **Code → Download ZIP**，解压后将包含 `SKILL.md`、`agents/` 和 `references/` 的仓库文件夹重命名为 `neo-ppt-skill`，放入个人 Codex 的 `skills` 目录。不要与现有同名技能直接合并或覆盖。
 
 安装后，在 Codex 中确认技能可见，再调用它。若当前会话未发现新技能，可重新打开 Codex 会话后检查。
+
+### DeepSeek 等其他 AI Agent
+
+支持技能安装的 Agent，可按其说明导入本仓库；支持上传文件或读取工作目录的 Agent，可提供 `SKILL.md` 和其中引用的 `references/` 文件，再用自然语言要求按本技能制作。安装位置和调用方式以所用 Agent 为准，`$neo-ppt-skill` 不是所有平台通用的命令。
+
+技能规范不绑定特定模型或服务。生成文件、搜集图片和打开页面检查等工作，需要所用 Agent 具备相应工具；目前未逐一验证所有平台。
 
 ## 使用方法
 
@@ -79,7 +85,7 @@ fi
 先整理大纲和讲稿，再给我10张有代表性的样稿。
 ```
 
-也可以使用自然语言：
+在 Codex、DeepSeek 等 AI Agent 中，加载技能说明后也可以使用自然语言：
 
 ```text
 使用 Neo_PPT_skill，沿用已确认的蓝橙样式，完成24页HTML演讲稿。
@@ -122,7 +128,7 @@ Neo_PPT_skill/
 - [视觉规范](references/visual-spec.md)：画布、色彩、字号与常用页面布局。
 - [交付检查表](references/delivery-checklist.md)：内容、画面、交互、离线与导出核对。
 - [项目示例](references/project-example.md)：一次长篇演讲如何形成这些约定。
-- [显示与调用设置](agents/openai.yaml)：技能名称、简短说明和默认提示。
+- [Codex 显示与调用设置](agents/openai.yaml)：Codex 中的技能名称、简短说明和默认提示；其他 Agent 可直接读取技能入口。
 - [效果图与来源](docs/previews/README.md)：4张实际页面截图、对应页码和素材出处。
 
 ## 素材与检查
